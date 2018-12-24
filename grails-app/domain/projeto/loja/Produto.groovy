@@ -8,6 +8,8 @@ class Produto {
     String foto
     Estoque estoque
 
+    static hasMany = [ detalhes: DetalheReserva]
+
     static constraints = {
 
         nome(nullable: false, blank: false,maxSize: 20)

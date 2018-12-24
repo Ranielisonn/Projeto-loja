@@ -8,6 +8,7 @@ class Administrador {
     String email
     String senha
 
+
     static constraints = {
         cpf(nullable: false, blank: false,maxSize: 11, unique: true)
         endereco(nullable: false, blank: false,maxSize: 40)

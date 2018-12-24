@@ -6,6 +6,11 @@ class DetalheReserva {
     Double valorV
     String obs
 
+    Produto produto
+    Reserva reserva
+
+    static belongsTo = [Reserva]
+
     static constraints = {
     }
 }

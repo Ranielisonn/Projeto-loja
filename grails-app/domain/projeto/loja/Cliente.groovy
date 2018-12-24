@@ -8,6 +8,7 @@ class Cliente {
     String email
     String senha
 
+    static hasMany = [reservas: Reserva]
     static constraints = {
         cpf(nullable: false, blank: false,maxSize: 11, unique: true)
         endereco(nullable: false, blank: false,maxSize: 40)
