@@ -8,6 +8,7 @@ class Reserva {
 
     static hasMany = [ detalhes: DetalheReserva]
     static constraints = {
-
+        valorT min: 0
+        cliente nullable: false
     }
 }

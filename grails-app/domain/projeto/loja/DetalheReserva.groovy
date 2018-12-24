@@ -12,5 +12,8 @@ class DetalheReserva {
     static belongsTo = [Reserva]
 
     static constraints = {
+        qtd min: 0
+        valorV min: 0
+        obs nullable: true, blank: true
     }
 }
