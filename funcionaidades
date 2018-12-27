@@ -1,0 +1,16 @@
+cadastrar produto
+
+listar produto
+
+reservar produto{
+    decrementar produto
+    enviar email
+    --cadrastar Date
+    após 3 dias
+    if(compra não efetuada){
+        incrementar produto para valor inicial
+    }else{
+        
+    }
+    
+}
