@@ -12,4 +12,18 @@
 *= require main
 *= require mobile
 *= require_self
+*= require font-awesome.min
+*= linearicons
+*= font-awesome.min
+*= themify-icons
+*= bootstrap
+*= owl.carousel
+*= nice-select
+*= nouislider.min
+*= ion.rangeSlider
+*= ion.rangeSlider.skinFlat
+*= magnific-popup
+*= main
+*=
+*=
 */
