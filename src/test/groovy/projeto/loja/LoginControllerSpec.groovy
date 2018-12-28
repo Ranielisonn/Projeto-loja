@@ -1,9 +1,9 @@
 package projeto.loja
 
-import grails.testing.gorm.DomainUnitTest
+import grails.testing.web.controllers.ControllerUnitTest
 import spock.lang.Specification
 
-class EstoqueSpec extends Specification implements DomainUnitTest<Estoque> {
+class LoginControllerSpec extends Specification implements ControllerUnitTest<LoginController> {
 
     def setup() {
     }

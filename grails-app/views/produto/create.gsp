@@ -6,33 +6,60 @@
         <title><g:message code="default.create.label" args="[entityName]" /></title>
     </head>
     <body>
-        <a href="#create-produto" class="skip" tabindex="-1"><g:message code="default.link.skip.label" default="Skip to content&hellip;"/></a>
-        <div class="nav" role="navigation">
-            <ul>
-                <li><a class="home" href="${createLink(uri: '/')}"><g:message code="default.home.label"/></a></li>
-                <li><g:link class="list" action="index"><g:message code="default.list.label" args="[entityName]" /></g:link></li>
-            </ul>
-        </div>
-        <div id="create-produto" class="content scaffold-create" role="main">
-            <h1><g:message code="default.create.label" args="[entityName]" /></h1>
-            <g:if test="${flash.message}">
-            <div class="message" role="status">${flash.message}</div>
-            </g:if>
-            <g:hasErrors bean="${this.produto}">
-            <ul class="errors" role="alert">
-                <g:eachError bean="${this.produto}" var="error">
-                <li <g:if test="${error in org.springframework.validation.FieldError}">data-field-id="${error.field}"</g:if>><g:message error="${error}"/></li>
-                </g:eachError>
-            </ul>
-            </g:hasErrors>
-            <g:form resource="${this.produto}" method="POST">
-                <fieldset class="form">
-                    <f:all bean="produto"/>
-                </fieldset>
-                <fieldset class="buttons">
-                    <g:submitButton name="create" class="save" value="${message(code: 'default.button.create.label', default: 'Create')}" />
-                </fieldset>
-            </g:form>
+
+            <section class="login_box_area section_gap">
+            		<div class="container">
+            			<div class="row">
+
+            				<div class="col-lg-6">
+            					<div class="login_form_inner">
+            						<div class="row login_form" >
+                                        <g:uploadForm controller="Produto">
+                                                            <div class="col-md-12 form-group">
+                                                                <g:textField name="nome" class="form-control" placeholder="Nome"/>
+                                                            </div></ br>
+
+
+                                                            <div class="col-md-12 form-group">
+                                                                <select name="categoria">"
+                                                                  <option value="null">Categoria</option>
+                                                                  <option value="Tinturaria">Tinturaria</option>
+                                                                  <option value="Ferramentas">Ferramentas</option>
+                                                                  <option value="Ferragens">Ferragens</option>
+                                                                  <option value="Hidraulica">Hidraulica</option>
+                                                                  <option value="Construçao">Construçao</option>
+                                                                </select>
+                                                            </div></ br>
+
+                                                            <div class="col-md-12 form-group">
+                                                                <g:textField name="codProduto" class="form-control" placeholder="codigo"/>
+                                                            </div></ br>
+
+                                                            <div class="col-md-12 form-group">
+                                                                <g:textField name="preco" class="form-control" placeholder="preço"/>
+                                                            </div></ br>
+
+                                                            <div class="col-md-12 form-group">
+                                                                <label>Foto</label></ br>
+                                                                <input type="file" name="arquivo" accept=".jpg, .jpeg, .png" data-max-size="120000"
+                                                                       class="form-control"/>
+                                                            </div></ br>
+
+                                                            <g:actionSubmit value="Cadastrar" action="save" class="primary-btn"/>
+                                                            <div class="social-login-content">
+                                                                <div class="social-button">
+
+                                                                </div>
+                                                            </div>
+
+                                                        </g:uploadForm>
+            						</div>
+            					</div>
+            				</div>
+            			</div>
+            		</div>
+
+
         </div>
     </body>
 </html>
