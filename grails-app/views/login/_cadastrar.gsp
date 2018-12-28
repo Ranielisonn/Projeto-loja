@@ -1,43 +1,36 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta name="layout" content="main" />
-        <g:set var="entityName" value="${message(code: 'produto.label', default: 'Produto')}" />
-        <title><g:message code="default.create.label" args="[entityName]" /></title>
-    </head>
-    <body>
-
-            <section class="login_box_area section_gap">
+    <section class="login_box_area section_gap">
             		<div class="container">
             			<div class="row">
 
             				<div class="col-lg-6">
             					<div class="login_form_inner">
             						<div class="row login_form" >
-                                        <g:uploadForm controller="Produto">
+            						/*funcionalidade não operando*/
+                                        <g:uploadForm controller="Cliente">
                                                             <div class="col-md-12 form-group">
                                                                 <g:textField name="nome" class="form-control" placeholder="Nome"/>
                                                             </div></ br>
+                                                            <div class="col-md-12 form-group">
+                                                            <g:textField name="cpf" class="form-control" placeholder="Cpf"/>
+                                                            </div></ br>
 
 
                                                             <div class="col-md-12 form-group">
-                                                                <select name="categoria">"
-                                                                  <option value="null">Categoria</option>
-                                                                  <option value="Tinturaria">Tinturaria</option>
-                                                                  <option value="Ferramentas">Ferramentas</option>
-                                                                  <option value="Ferragens">Ferragens</option>
-                                                                  <option value="Hidraulica">Hidraulica</option>
-                                                                  <option value="Construçao">Construçao</option>
-                                                                </select>
+                                                                <g:textField name="dataN" class="form-control" placeholder="Data de Nascimento"/>
                                                             </div></ br>
 
                                                             <div class="col-md-12 form-group">
-                                                                <g:textField name="codProduto" class="form-control" placeholder="codigo"/>
+                                                                <g:textField name="endereco" class="form-control" placeholder="Endereço"/>
                                                             </div></ br>
 
+
                                                             <div class="col-md-12 form-group">
-                                                                <g:textField name="preco" class="form-control" placeholder="preço"/>
+                                                            <g:textField name="email" class="form-control" placeholder="Email"/>
                                                             </div></ br>
+
+                                                            <div class="col-md-12  form-group">
+                                                            <g:passwordField name="senha" class="form-control" placeholder="Senha"/>
+                                                            </div>
 
                                                             <div class="col-md-12 form-group">
                                                                 <label>Foto</label></ br>
@@ -45,7 +38,7 @@
                                                                        class="form-control"/>
                                                             </div></ br>
 
-                                                            <g:actionSubmit value="Cadastrar" action="save" class="primary-btn"/>
+                                                            <g:actionSubmit value="Cadastrar" action="cadastrar" class="primary-btn"/>
                                                             <div class="social-login-content">
                                                                 <div class="social-button">
 
@@ -59,8 +52,3 @@
             			</div>
             		</div>
             </section>
-
-
-        </div>
-    </body>
-</html>

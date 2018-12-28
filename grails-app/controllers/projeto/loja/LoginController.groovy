@@ -8,26 +8,29 @@ class LoginController {
 
     def login(){
 
-        def adm = Administrador.findByEmail(params.email)
-        if(adm && (adm.senha == params.senha)){
-            session.usuario = adm
+        def administrador = Administrador.findByEmail(params.email)
+        def cliente = Cliente.findByEmail(params.email)
+            //Adm 0 email: master@adm.com | senha: masteradm
+
+        if(administrador && (administrador.senha == params.senha)){
+            session.usuario = administrador
+
+        println("Login efetudo com sucesso!")
             render view: "/index", model: [texto: 'funcionou!!']
-        }else{
-            render view: "/cliente/login", model: [texto: 'erro!!']
-        }
 
+        }else if(cliente && (cliente.senha == params.senha)){
+
+            println("Login efetuado com sucesso!")
+            session.usuario = cliente
+            render view: "/index", model: [texto: 'funcionou!!']
+
+        }else{
+
+            render view: "/login/index", model: [texto: 'erro!!']
+
+        }
 
     }
 
-    def entrar() {
-        def adm = Administrador.findByUserAndSenha(params.user, params.senha)
-        if (adm){
-            session.usuario = adm
-            println(adm)
-            render view: "/index"
-        }else{
 
-            redirect(action: 'index', controller: 'login')
-        }
-    }
 }

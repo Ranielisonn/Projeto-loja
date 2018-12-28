@@ -1,17 +1,16 @@
 package projeto.loja
 
 class Cliente {
-    int cpf
+    String cpf
     String nome
     String endereco
-    Date dataN
+    String dataN
     String email
     String senha
-    String user
 
     static hasMany = [reservas: Reserva]
     static constraints = {
-        cpf(nullable: false, blank: false,maxSize: 11, unique: true)
+        cpf(nullable: false, blank: false, unique: true)
         endereco(nullable: false, blank: false,maxSize: 40)
         nome(nullable: false, blank: false,maxSize: 40)
         dataN(nullable: false, blank: false)

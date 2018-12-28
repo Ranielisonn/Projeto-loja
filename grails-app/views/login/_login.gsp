@@ -7,9 +7,9 @@
 						// <img class="img-fluid" src="img/login.jpg" alt="">
 						<asset:image class="img-fluid" src="login.jpg" />
 						<div class="hover">
-							<h4>New to our website?</h4>
-							<p>There are advances being made in science and technology everyday, and a good example of this is the</p>
-							<a class="primary-btn" href="registration.html">Create an Account</a>
+							<h4>É novo por aqui?</h4>
+							<p>Cadastre-se no link abaixo!</p>
+							<g:link class="primary-btn" controller="Cliente" action="btnCadastro">Criar uma Conta</g:link>
 						</div>
 					</div>
 				</div>
